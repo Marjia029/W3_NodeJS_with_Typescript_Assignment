@@ -1,0 +1,49 @@
+{
+  "title": "Mountain Escape Lodge Demo",
+  "description": "A serene retreat nestled in the mountains, perfect for relaxation and outdoor adventures.",
+  "guestCount": 6,
+  "bedroomCount": 3,
+  "bathroomCount": 3,
+  "hostInfo": "Sarah Johnson, nature lover and experienced host",
+  "address": "456 Mountain View Road, Aspen, CO 81611, USA",
+  "latitude": 39.1911,
+  "longitude": -106.8175,
+  "rooms": [
+    {
+      "hotelSlug": "mountain-escape-lodge",
+      "roomSlug": "room-201",
+      "roomImage": "/roomImages/1731411714164-304203852-hotel1.jpeg",
+      "roomTitle": "Master Suite",
+      "bedroomCount": 1
+    },
+    {
+      "hotelSlug": "mountain-escape-lodge",
+      "roomSlug": "room-202",
+      "roomImage": "",
+      "roomTitle": "Forest View Room",
+      "bedroomCount": 1
+    },
+    {
+      "hotelSlug": "mountain-escape-lodge",
+      "roomSlug": "room-203",
+      "roomImage": "",
+      "roomTitle": "Cozy Cabin Room",
+      "bedroomCount": 1
+    }
+  ],
+  "images": [
+    "http://localhost/images/1731399102032-hotel3.jpeg",
+    "http://localhost:3000/images/1731399732152-hotel3.jpeg"
+  ],
+  "amenities": [
+    "Wi-Fi",
+    "Fireplace",
+    "Hot Tub",
+    "Outdoor Hiking Trails",
+    "Mountain Views",
+    "Free Parking",
+    "Breakfast Included"
+  ],
+  "id": 3,
+  "slug": "mountain-escape-lodge-demo"
+}
