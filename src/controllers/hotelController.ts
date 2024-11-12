@@ -61,7 +61,7 @@ export const findHotelBySlug = async (slug: string): Promise<Hotel | null> => {
 };
 
 // Function to get the next available hotel ID (auto-generation)
-const getNextHotelId = (): number => {
+export const getNextHotelId = (): number => {
   const files = fs.readdirSync(hotelsDir);
   let maxId = 0;
 
