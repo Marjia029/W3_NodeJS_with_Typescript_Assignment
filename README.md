@@ -202,7 +202,7 @@ The server will return the response of the specified hotel.
 ```
 
 ### 3. PUT/hotels/:hotel-id
-Update information about a hotel using its unique ID. Url - http://localhost:3000/hotels/:hotel-id 
+Update information about a hotel using its unique ID. Url - http://localhost:5000/hotels/:hotel-id 
 
 ### 4. POST/images/:htel-id
 Updates the **images** associated with the slug. Url - http://localhost:5000/images/:hotel-id
