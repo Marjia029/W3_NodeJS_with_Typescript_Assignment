@@ -1,8 +1,11 @@
 import { Request, Response } from 'express';
 import fs from 'fs';
 import path from 'path';
+import { validationResult } from 'express-validator';
+
 import { Hotel } from '../models/hotelModel';
 import { createSlug } from '../utils/slugifyUtil';
+
 
 const dataDir = path.join(__dirname, '..', 'data');
 const hotelsDir = path.join(dataDir, 'hotels');
@@ -79,18 +82,23 @@ export const getNextHotelId = (): number => {
 
 // POST: Create a new hotel
 export const createHotel = async (req: Request, res: Response): Promise<void> => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    res.status(400).json({ errors: errors.array() });
+    return;
+  }
   try {
     const hotel: Hotel = {
       ...req.body,
       id: getNextHotelId(),  // Automatically generate the ID here
-      rooms: req.body.rooms || [],
+      //rooms: req.body.rooms || [],
       images: req.body.images || [],
-      amenities: req.body.amenities || []
+      //amenities: req.body.amenities || []
     };
     
     // Validate required fields
     const requiredFields = ['title', 'description', 'guestCount', 'bedroomCount', 
-                            'bathroomCount', 'hostInfo', 'address', 'latitude', 'longitude'];
+                            'bathroomCount', 'amenities','hostInfo', 'address', 'latitude', 'longitude', 'rooms'];
     
     for (const field of requiredFields) {
       if (!(field in hotel)) {
@@ -164,6 +172,13 @@ export const getHotel = async (req: Request, res: Response): Promise<void> => {
 
 // PUT: Update an existing hotel by its ID
 export const updateHotel = async (req: Request, res: Response): Promise<void> => {
+
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    res.status(400).json({ errors: errors.array() });
+    return;
+  }
+
   try {
     const hotelId = parseInt(req.params.hotelId, 10);
     if (isNaN(hotelId)) {
@@ -184,9 +199,9 @@ export const updateHotel = async (req: Request, res: Response): Promise<void> =>
       ...existingData,
       ...req.body,
       id: hotelId,  // Ensure ID remains unchanged
-      rooms: req.body.rooms || existingData.rooms || [],
+      //rooms: req.body.rooms || existingData.rooms || [],
       images: req.body.images || existingData.images || [],
-      amenities: req.body.amenities || existingData.amenities || []
+      //amenities: req.body.amenities || existingData.amenities || []
     };
 
     if (req.body.title) {
