@@ -3,7 +3,7 @@ import path from 'path';
 import fs from 'fs';
 
 export const app = express();
-const PORT = 3000;
+const PORT = 5000;
 
 // Middleware to parse JSON requests
 app.use(express.json());

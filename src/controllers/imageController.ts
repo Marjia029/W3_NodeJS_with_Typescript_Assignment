@@ -50,7 +50,7 @@ export const uploadImage = async (req: Request, res: Response): Promise<void> =>
     }
 
     // Construct base URL for images
-    const baseUrl = 'http://localhost:3000/images';  // Adjust this if needed
+    const baseUrl = 'http://localhost:5000/images';  // Adjust this if needed
 
     // Update the images field with the uploaded file path(s)
     if (req.files && Array.isArray(req.files)) {

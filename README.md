@@ -40,7 +40,7 @@ To start the development server:
 ```bash
 npm run dev
 ```
-The server will run on http://localhost:3000.
+The server will run on http://localhost:5000.
 
 
 ## Hotel Data Schema
@@ -74,7 +74,7 @@ Each hotel contains multiple rooms, and each room has the following details:
 
 ## Endpoints
 ### 1. POST/hotels
-Url for creating a new hotel record is - http://localhost:3000/hotels
+Url for creating a new hotel record is - http://localhost:5000/hotels
 
 The json format of sending data-
 ```json
@@ -160,7 +160,7 @@ the "images" field is not required.
 ```
 The records are saved ad hotel-id.json format in ***/data/hotels*** directory. You can create hotel either using ***POSTMAN*** application or ***THUNDER CLIENT*** extension from vs code.
 ### 2. GET/hotels/:hotel-id
-Retrieve detailed information about a hotel using its unique ID. Url - http://localhost:3000/hotels/:hotel-id or http://localhost:3000/hotels/:hotel-slug
+Retrieve detailed information about a hotel using its unique ID. Url - http://localhost:5000/hotels/:hotel-id or http://localhost:5000/hotels/:hotel-slug
 - **Response**: A JSON object containing hotel details, including image URLs.
 The server will return the response of the specified hotel.
 
@@ -205,21 +205,21 @@ The server will return the response of the specified hotel.
 Update information about a hotel using its unique ID. Url - http://localhost:3000/hotels/:hotel-id 
 
 ### 4. POST/images/:htel-id
-Updates the **images** associated with the slug. Url - http://localhost:3000/images/:hotel-slug
+Updates the **images** associated with the slug. Url - http://localhost:5000/images/:hotel-id
 #### Instructions
 - Open POSTMAN
 - Set the htttp request method to POST
-- Set the url to http://localhost:3000/images/:hotel-slug
+- Set the url to http://localhost:5000/images/:hotel-id
 - Go to Body and select form-data
 - Set the **Key** as **images** and add image of the hotel to the value.
 
 ### 5. POST/images/rooms/:hotelid/:room-slug
-Updates the **roomImage** associated with the slug. Url - http://localhost:3000/images/rooms/:hotel-id/:room-slug
+Updates the **roomImage** associated with the slug. Url - http://localhost:5000/images/rooms/:hotel-id/:room-slug
 
 #### Instructions
 - Open POSTMAN
 - Set the htttp request method to POST
-- Set the url to http://localhost:3000/images/rooms/:hotel-id/:room-slug
+- Set the url to http://localhost:5000/images/rooms/:hotel-id/:room-slug
 - Go to Body and select form-data
 - Set the **Key** as **roomImage** and add image of the hotel-room to the value.
 

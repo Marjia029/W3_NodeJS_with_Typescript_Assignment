@@ -37,9 +37,9 @@
       "bedroomCount": 2
     }
   ],
-  "id": 1,
+  "id": 2,
   "images": [
-    "http://localhost:3000/images/1731488288729-hotel1.jpeg"
+    "http://localhost:5000/images/1731488511229-hotel1.jpeg"
   ],
-  "slug": "luxury-oceanfront-hotel-without-image-field-after-required"
+  "slug": "luxury-oceanfront-hotel-without-image-field-after-required-2"
 }
