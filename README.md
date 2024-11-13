@@ -42,10 +42,7 @@ npm run dev
 ```
 The server will run on http://localhost:3000.
 
-### 4. Run the Unit Tests
-```bash
-npm test
-```
+
 ## Hotel Data Schema
 
 Each hotel record is stored in a separate JSON file named `hotel-id.json`, where `hotel-id` is the unique identifier for the hotel. The hotel data follows this structure:
@@ -225,6 +222,11 @@ Updates the **roomImage** associated with the slug. Url - http://localhost:3000/
 - Set the url to http://localhost:3000/images/rooms/:hotel-id/:room-slug
 - Go to Body and select form-data
 - Set the **Key** as **roomImage** and add image of the hotel-room to the value.
+
+### Run the Unit Tests
+```bash
+npm test
+```
 
 
 
