@@ -46,7 +46,6 @@ The server will run on http://localhost:3000.
 ```bash
 npm test
 ```
-## Schema
 ## Hotel Data Schema
 
 Each hotel record is stored in a separate JSON file named `hotel-id.json`, where `hotel-id` is the unique identifier for the hotel. The hotel data follows this structure:

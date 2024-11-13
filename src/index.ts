@@ -2,7 +2,7 @@ import express, { Request, Response } from 'express';
 import path from 'path';
 import fs from 'fs';
 
-const app = express();
+export const app = express();
 const PORT = 3000;
 
 // Middleware to parse JSON requests
